@@ -2,20 +2,39 @@
   {
     "name": "Project Alpha",
     "description": "Full-stack web application with Next.js and PostgreSQL",
+    "longDescription": "A full-stack web application built with Next.js and PostgreSQL, featuring a modern design and robust functionality.",
     "projectUrl": "https://project-alpha.com",
+    "techStack": ["Next.js", "TypeScript", "PostgreSQL", "Tailwind CSS"],
+    "screenshots": [
+      "/images/projects/project-alpha-1.png",
+      "/images/projects/project-alpha-2.png",
+      "/images/projects/project-alpha-3.png"
+    ],
     "githubUrl": "https://github.com/vmagonezos/project-alpha",
     "slug": "project-alpha"
   },
   {
     "name": "Project Beta",
     "description": "React Native mobile application for task management",
+    "longDescription": "A comprehensive task management application built with React Native, allowing users to organize and prioritize their tasks effectively.",
     "projectUrl": null,
     "githubUrl": "https://github.com/vmagonezos/project-beta",
+    "techStack": ["React Native", "TypeScript", "Firebase"],
+    "screenshots": [
+      "/images/projects/project-beta-1.png",
+      "/images/projects/project-beta-2.png"
+    ],
     "slug": "project-beta"
   },
   {
     "name": "Project Gamma",
     "description": "Open-source TypeScript library for data visualization",
+    "longDescription": "An open-source library for data visualization built with TypeScript, providing a set of reusable components and utilities.",
+    "techStack": ["TypeScript", "D3.js"],
+    "screenshots": [
+      "/images/projects/project-gamma-1.png",
+      "/images/projects/project-gamma-2.png"
+    ],
     "projectUrl": "https://project-gamma.dev",
     "githubUrl": null,
     "slug": "project-gamma"

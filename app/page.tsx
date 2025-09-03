@@ -1,4 +1,5 @@
 import { Download, ExternalLink, Github, Linkedin } from "lucide-react";
+import Image from "next/image";
 import DetailsButton from "./components/DetailsButton.client";
 import projects from "./projects.json";
 
@@ -16,84 +17,80 @@ const Home = () => {
 
   return (
     <div className="min-h-screen bg-black text-gray-50">
-      <div className="max-w-7xl mx-auto px-6 py-16 flex flex-col gap-16">
+      <div className="max-w-7xl mx-auto px-8 pt-12 flex flex-col gap-16">
         {/* Header Section */}
-        <header className="flex flex-col gap-12">
-          <h1 className="text-4xl font-light tracking-wide text-gray-50">
-            Vaggelis Magonezos
-          </h1>
-
-          {/* Contact Information */}
-          <section className="flex flex-col gap-6">
-            <h2 className="text-lg font-medium text-gray-400">Contact</h2>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              <address className="not-italic flex flex-col gap-2">
-                <span className="text-gray-400 text-sm">Email</span>
-                <a
-                  href="mailto:vaggelis@example.com"
-                  className="text-gray-50 hover:text-blue-400 transition-colors  break-words"
-                >
-                  evaggelos.magonezos@gmail.com
-                </a>
-              </address>
-
-              <address className="not-italic flex flex-col gap-2">
-                <span className="text-gray-400 text-sm">Phone</span>
-                <a
-                  href="tel:+1234567890"
-                  className="text-gray-50 hover:text-blue-400 transition-colors flex items-center"
-                >
-                  +30 (694) 78-13-200
-                </a>
-              </address>
-
-              <div className="flex flex-col gap-2">
-                <span className="text-gray-400 text-sm">Based</span>
-                <p className="text-gray-50 flex items-center">
-                  {`Athens, Greece ${athensTime}`}
-                </p>
+        <header className="flex flex-col gap-8">
+          <div className="flex flex-col gap-6">
+            {/* Name and Profile Photo */}
+            <div className="flex items-center gap-4">
+              <div className="relative">
+                <Image
+                  src="/IMG_1925.jpg"
+                  alt="Vaggelis Magonezos"
+                  width={64}
+                  height={64}
+                  className="rounded-full ring-1 ring-gray-800"
+                  priority
+                />
               </div>
+              <h1 className="text-2xl font-normal tracking-tight text-gray-100">
+                Vaggelis Magonezos
+              </h1>
+            </div>
 
-              <div className="flex flex-col gap-2">
-                <span className="text-gray-400 text-sm">Links</span>
-                <nav className="flex flex-col gap-2">
-                  <a
-                    href="https://github.com/vmagonezos"
-                    className="text-gray-50 hover:text-blue-400 transition-colors flex items-center gap-2"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Github size={16} className="text-gray-400" />
-                    GitHub
-                  </a>
-                  <a
-                    href="https://linkedin.com/in/vmagonezos"
-                    className="text-gray-50 hover:text-blue-400 transition-colors flex items-center gap-2"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Linkedin size={16} className="text-gray-400" />
-                    LinkedIn
-                  </a>
-                  <a
-                    href="/resume.pdf"
-                    className="text-gray-50 hover:text-blue-400 transition-colors flex items-center gap-2"
-                    download
-                  >
-                    <Download size={16} className="text-gray-400" />
-                    Resume
-                  </a>
-                </nav>
+            {/* Contact Information*/}
+            <div className="flex flex-wrap items-center gap-x-8 gap-y-4 text-sm text-gray-400">
+              <a
+                href="mailto:evaggelos.magonezos@gmail.com"
+                className="hover:text-blue-400 transition-colors"
+              >
+                evaggelos.magonezos@gmail.com
+              </a>
+
+              <a
+                href="tel:+306947813200"
+                className="hover:text-blue-400 transition-colors"
+              >
+                +30 694 781 3200
+              </a>
+
+              <span className="text-gray-400">Athens, Greece {athensTime}</span>
+
+              <div className="flex items-center gap-4">
+                <a
+                  href="https://github.com/vmagonezos"
+                  className="hover:text-blue-400 transition-colors flex items-center gap-1.5"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Github size={14} className="text-gray-600" />
+                  GitHub
+                </a>
+                <a
+                  href="https://linkedin.com/in/vmagonezos"
+                  className="hover:text-gray-300 transition-colors flex items-center gap-1.5"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Linkedin size={14} className="text-gray-600" />
+                  LinkedIn
+                </a>
+                <a
+                  href="/resume.pdf"
+                  className="hover:text-blue-400 transition-colors flex items-center gap-1.5"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Download size={14} className="text-gray-600" />
+                  Resume
+                </a>
               </div>
             </div>
-          </section>
+          </div>
 
           {/* Welcome Section */}
-          <section className="max-w-3xl flex flex-col gap-6">
-            <h2 className="text-lg font-medium text-gray-400">
-              A few things about me
-            </h2>
-            <p className="text-gray-50 leading-relaxed text-lg">
+          <section className="max-w-3xl flex flex-col gap-4 mt-4">
+            <p className="text-gray-300 leading-relaxed">
               Hello World 👋 ! <br />
               I'm Vaggelis and I got into web development back in 2018 when I
               started building small tools to make my job easier, and I quickly
@@ -102,9 +99,13 @@ const Home = () => {
               figuring out how to fix them. These days I mainly work with
               JavaScript with tools like React, React Native, Next.js, and
               Node.js. I lean more toward the front end because I like making
-              clean, simple, and fast UIs, but I enjoy picking up new tech
+              clean, fast and mobile-first UIs, but I enjoy picking up new tech
               whenever I can. For me, it's all about learning by building and
               keeping things straightforward.
+              <br />I have been involved in various projects, ranging from
+              enterprise-grade full-stack applications to small, niche, useful
+              tools, as well as company websites, e-shops, and published mobile
+              apps.
             </p>
           </section>
         </header>
@@ -113,55 +114,53 @@ const Home = () => {
 
         {/* Projects Section */}
         <main>
-          <section className="flex flex-col gap-8">
-            <h2 className="text-2xl font-light tracking-wide text-gray-50">
-              What I've been creating
+          <section className="flex flex-col gap-6">
+            <h2 className="text-lg font-normal text-gray-400 mb-2">
+              What I've been working on
             </h2>
 
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-5">
               {projects.map((project) => (
                 <article
                   key={project.slug}
-                  className="border-b border-gray-800 pb-6 last:border-b-0"
+                  className="flex flex-col md:flex-row md:items-start md:justify-between gap-3 py-3 border-b border-gray-900 last:border-b-0"
                 >
-                  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-                    <div className="flex-1 flex flex-col gap-3">
-                      <h3 className="text-xl font-medium text-gray-50">
-                        {project.name}
-                      </h3>
-                      <p className="text-gray-400 text-sm">
-                        {project.description}
-                      </p>
+                  <div className="flex-1 flex flex-col gap-2">
+                    <h3 className="text-base font-medium text-gray-300">
+                      {project.name}
+                    </h3>
+                    <p className="text-gray-500 text-sm leading-relaxed">
+                      {project.description}
+                    </p>
 
-                      <div className="flex flex-wrap gap-4 text-sm">
-                        {project.projectUrl && (
-                          <a
-                            href={project.projectUrl}
-                            className="text-gray-50 hover:text-blue-400 transition-colors flex items-center gap-1.5"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <ExternalLink size={14} className="text-gray-400" />
-                            Have a look
-                          </a>
-                        )}
-                        {project.githubUrl && (
-                          <a
-                            href={project.githubUrl}
-                            className="text-gray-50 hover:text-blue-400 transition-colors flex items-center gap-1.5"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <Github size={14} className="text-gray-400" />
-                            GitHub
-                          </a>
-                        )}
-                      </div>
+                    <div className="flex flex-wrap gap-4 text-sm mt-1">
+                      {project.projectUrl && (
+                        <a
+                          href={project.projectUrl}
+                          className="text-gray-500 hover:text-blue-400 transition-colors flex items-center gap-1.5"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <ExternalLink size={12} className="text-gray-600" />
+                          Visit
+                        </a>
+                      )}
+                      {project.githubUrl && (
+                        <a
+                          href={project.githubUrl}
+                          className="text-gray-500 hover:text-blue-400 transition-colors flex items-center gap-1.5"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Github size={12} className="text-gray-600" />
+                          GitHub
+                        </a>
+                      )}
                     </div>
+                  </div>
 
-                    <div>
-                      <DetailsButton href={`/projects/${project.slug}`} />
-                    </div>
+                  <div className="md:ml-6 mt-1 md:mt-0">
+                    <DetailsButton href={`/projects/${project.slug}`} />
                   </div>
                 </article>
               ))}
@@ -169,7 +168,7 @@ const Home = () => {
           </section>
         </main>
 
-        <footer className="mt-16 pt-8 border-t border-gray-800">
+        <footer className="mt-16 p-8 border-t border-gray-800">
           <p className="text-gray-400 text-sm text-center">
             © {new Date().getFullYear()} Vaggelis Magonezos. All rights
             reserved.
