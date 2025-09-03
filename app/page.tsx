@@ -1,6 +1,14 @@
-import { Download, ExternalLink, Github, Linkedin } from "lucide-react";
+import {
+  Download,
+  ExternalLink,
+  Github,
+  Linkedin,
+  Mail,
+  MapPin,
+  Phone,
+} from "lucide-react";
+import DetailsButton from "./components/DetailsButton";
 import Image from "next/image";
-import DetailsButton from "./components/DetailsButton.client";
 import projects from "./projects.json";
 
 //--------------------------------------------------------------
@@ -42,19 +50,24 @@ const Home = () => {
             <div className="flex flex-wrap items-center gap-x-8 gap-y-4 text-sm text-gray-400">
               <a
                 href="mailto:evaggelos.magonezos@gmail.com"
-                className="hover:text-blue-400 transition-colors"
+                className="hover:text-blue-400 transition-colors flex items-center gap-1.5"
               >
+                <Mail size={14} className="text-gray-600" />
                 evaggelos.magonezos@gmail.com
               </a>
 
               <a
                 href="tel:+306947813200"
-                className="hover:text-blue-400 transition-colors"
+                className="hover:text-blue-400 transition-colors flex items-center gap-1.5"
               >
+                <Phone size={14} className="text-gray-600" />
                 +30 694 781 3200
               </a>
 
-              <span className="text-gray-400">Athens, Greece {athensTime}</span>
+              <span className="text-gray-400 flex items-center gap-1.5">
+                <MapPin size={14} className="text-gray-600" />
+                Athens, Greece {athensTime}
+              </span>
 
               <div className="flex items-center gap-4">
                 <a

@@ -1,5 +1,3 @@
-"use client";
-
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
@@ -14,11 +12,11 @@ const DetailsButton = ({ href }: { href: string }) => {
       Details
       <ArrowRight
         size={14}
-        className="text-gray-400 group-hover:text-blue-400 group-hover:translate-x-4 group-hover:opacity-0 transition-all duration-600"
+        className="text-gray-400 group-hover:text-blue-400 group-hover:translate-x-4 group-hover:opacity-0 group-hover:scale-125 transition-all duration-600"
       />
       <ArrowRight
         size={14}
-        className="absolute right-3 text-blue-400 -translate-x-4 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-600"
+        className="absolute right-3 text-blue-400 -translate-x-4 opacity-0 scale-75 group-hover:translate-x-0 group-hover:opacity-100 group-hover:scale-100 transition-all duration-600"
       />
     </Link>
   );
