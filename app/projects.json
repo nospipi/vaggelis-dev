@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Project Alpha",
+    "description": "Full-stack web application with Next.js and PostgreSQL",
+    "projectUrl": "https://project-alpha.com",
+    "githubUrl": "https://github.com/vmagonezos/project-alpha",
+    "slug": "project-alpha"
+  },
+  {
+    "name": "Project Beta",
+    "description": "React Native mobile application for task management",
+    "projectUrl": null,
+    "githubUrl": "https://github.com/vmagonezos/project-beta",
+    "slug": "project-beta"
+  },
+  {
+    "name": "Project Gamma",
+    "description": "Open-source TypeScript library for data visualization",
+    "projectUrl": "https://project-gamma.dev",
+    "githubUrl": null,
+    "slug": "project-gamma"
+  }
+]
